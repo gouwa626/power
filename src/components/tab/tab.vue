@@ -33,8 +33,8 @@
               <i class="el-icon-news"></i>
               <span>数据统计</span>
             </template>
-            <el-menu-item index="/data">出票数据</el-menu-item>
-            <el-menu-item index="/fail">出票失败</el-menu-item>
+            <el-menu-item index="/bill-data">出票数据</el-menu-item>
+            <el-menu-item index="/bill-fail">出票失败</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
