@@ -32,7 +32,7 @@
               <i class="el-icon-news"></i>
               <span>决策</span>
             </template>
-            <el-menu-item index="/bill-data">决策</el-menu-item>
+            <el-menu-item index="/policy">决策</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
