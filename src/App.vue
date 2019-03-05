@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="tab-wrapper" v-if="isLogin">
+    <div class="tab-wrapper" v-if="this.$route.path!=='/signin'">
       <tab></tab>
     </div>
     <div class="link-wrapper">
-      <login :isLogin="isLogin" v-if="isLogin"></login>
+      <login :isLogin="isLogin" v-if="this.$route.path!=='/signin'"></login>
       <router-view />
     </div>
   </div>
@@ -20,6 +20,9 @@ export default {
     return {
       isLogin: false
     };
+  },
+  mounted () {
+    console.log(this.$route.path);
   },
   components: {
     Tab,

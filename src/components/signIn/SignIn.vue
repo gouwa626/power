@@ -4,8 +4,8 @@
              <div class="icon_dianwang">
                  <img src="../../assets/logo.jpg" width="230">
              </div>
-         </header> 
-         <div class="sign-section"> 
+         </header>
+         <div class="sign-section">
              <div class="sign-title">
                  停电单查询支持系统
              </div>
@@ -29,26 +29,26 @@
 
 <script>
 export default {
-    data(){
-        return{
-            "signin":{
-                "userinfo":'',
-                "password":''
-            }
-        }
-    },
-    methods: {
-        submitclick(){
-            console.log(this.signin);
-        },
-        cancelclick(){
-           let newSign ={
-                "userinfo":'',
-                "password":''
-            }
-            this.signin = {...this.signin,...newSign};
-        }
+  data() {
+    return {
+      "signin": {
+        "userinfo": '',
+        "password": ''
+      }
     }
+  },
+  methods: {
+    submitclick() {
+      console.log(this.signin);
+    },
+    cancelclick() {
+      let newSign = {
+        "userinfo": '',
+        "password": ''
+      }
+      this.signin = {...this.signin, ...newSign};
+    }
+  }
 }
 </script>
 
@@ -59,7 +59,6 @@ export default {
         height:100%;
         margin:0 auto;
         align-items:center;
-       
 
          .icon_dianwang{
             width:100%;
@@ -69,7 +68,6 @@ export default {
 
         .sign-section{
             margin:0 auto;
-            
 
             .sign-title{
                 font-size:40px;
@@ -106,15 +104,13 @@ export default {
                     >>> .el-button{
                         margin:25px;
                     }
-                    
-                   
+
                 }
                 .btn-sign{
                     margin:0 50px;
                 }
             }
         }
-       
+
     }
 </style>
-
