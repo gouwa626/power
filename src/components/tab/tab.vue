@@ -9,32 +9,30 @@
           :router="true"
           :default-active="$route.path"
           class="el-menu-vertical-demo"
-          background-color="rgb(48, 65, 86)"
+          background-color="rgb(0,101,105)"
           text-color="#fff"
           active-text-color="#fff"
         >
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span>订单管理</span>
+              <span>查询</span>
             </template>
-            <el-menu-item index="/control">出票监控</el-menu-item>
-            <el-menu-item index="/redeem">兑奖管理</el-menu-item>
+            <el-menu-item index="/control">停电单查询</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-menu"></i>
-              <span>站点管理</span>
+              <span>录入</span>
             </template>
-            <el-menu-item index="/site">站点信息</el-menu-item>
+            <el-menu-item index="/site">停电单录入</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-news"></i>
-              <span>数据统计</span>
+              <span>决策</span>
             </template>
-            <el-menu-item index="/bill-data">出票数据</el-menu-item>
-            <el-menu-item index="/bill-fail">出票失败</el-menu-item>
+            <el-menu-item index="/bill-data">决策</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
@@ -68,6 +66,6 @@ export default {
 }
 
 .tab >>> .el-submenu__title:hover, .is-active, .el-menu-item:hover {
-  background: #26a9e3 !important;
+  background: #2E8B57 !important;
 }
 </style>

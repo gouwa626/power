@@ -37,7 +37,7 @@ export default {
     flex: 0 0 200px;
     width: 200px;
     height: 100%;
-    background-color: rgb(48, 65, 86);
+    background-color: #fff
   }
 
   .link-wrapper {

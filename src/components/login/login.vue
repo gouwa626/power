@@ -24,8 +24,8 @@ export default{
   line-height 37px
   text-align right
   font-size 14px
-  color #fff
-  background-color rgba(46, 54, 62, 1)
+  color #999
+  background-color #fff
   span
     padding: 5px
 </style>
