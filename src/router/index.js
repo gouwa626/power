@@ -5,6 +5,7 @@ import Redeem from 'components/redeem/redeem'
 import Site from 'components/site/site'
 import BillData from 'components/data/data'
 import BillFail from 'components/fail/fail'
+import SignIn from 'components/signin/signin'
 
 Vue.use(Router)
 
@@ -12,7 +13,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/control'
+      redirect: '/signin'
+    },
+    {
+      path: '/signin',
+      name: 'SignIn',
+      component: SignIn
     },
     {
       path: '/control',

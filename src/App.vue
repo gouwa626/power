@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="tab-wrapper">
+    <div class="tab-wrapper" v-if="isLogin">
       <tab></tab>
     </div>
     <div class="link-wrapper">
-      <login :isLogin="isLogin"></login>
+      <login :isLogin="isLogin" v-if="isLogin"></login>
       <router-view />
     </div>
   </div>
