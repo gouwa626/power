@@ -3,9 +3,13 @@ import Router from 'vue-router'
 import Control from 'components/control/control'
 import Redeem from 'components/redeem/redeem'
 import Site from 'components/site/site'
+<<<<<<< HEAD
 import BillData from 'components/data/data'
 import BillFail from 'components/fail/fail'
 import SignIn from 'components/signin/signin'
+=======
+import Policy from 'components/policy/policy'
+>>>>>>> dev
 
 Vue.use(Router)
 
@@ -36,14 +40,9 @@ export default new Router({
       component: Site
     },
     {
-      path: '/bill-data',
-      name: 'BillData',
-      component: BillData
-    },
-    {
-      path: '/bill-fail',
-      name: 'BillFail',
-      component: BillFail
+      path: '/policy',
+      name: 'Policy',
+      component: Policy
     }
   ]
 })
