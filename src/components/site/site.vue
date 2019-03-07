@@ -15,16 +15,32 @@
       <div class="block">
         <span class="demonstration">停电时间:</span>
         <el-time-picker
-          v-model="time"
+          v-model="timebegin"
           placeholder="选择停电时间">
         </el-time-picker>
       </div>
       <div class="block">
         <span class="demonstration">恢复时间:</span>
         <el-time-picker
-          v-model="time"
+          v-model="timeover"
           placeholder="选择恢复时间">
         </el-time-picker>
+      </div>
+      <div class="block line">
+        <span class="demonstration">项目属性:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="itemAttr"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
+        <span class="demonstration">停电平衡状态:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="state"
+          clearable>
+        </el-input>
       </div>
       <div class="block line">
         <span class="demonstration">线路:</span>
@@ -35,10 +51,26 @@
         </el-input>
       </div>
       <div class="block line">
+        <span class="demonstration">施工单位:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="buildUnit"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
+        <span class="demonstration">许可班组:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="permitGroup"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
         <span class="demonstration">原因:</span>
         <el-input
           placeholder="请输入内容"
-          v-model="linevalue"
+          v-model="reason"
           clearable>
         </el-input>
       </div>
@@ -48,16 +80,17 @@
           type="textarea"
           :autosize="{ minRows: 2, maxRows: 4}"
           placeholder="请输入内容"
-          v-model="textarea3">
+          v-model="remarks">
         </el-input>
       </div>
     </div>
+      
     <div class="buttonWrap">
       <div class="btn">
-        <el-button round>保存</el-button>
+        <el-button round @click="save">保存</el-button>
       </div>
       <div class="btn">
-        <el-button round>取消</el-button>
+        <el-button round @click="quit">取消</el-button>
       </div>
     </div>
   </div>
@@ -68,8 +101,50 @@ export default{
   data () {
     return {
       time: '',
+      timebegin: '',
+      timeover: '',
       linevalue: '',
-      textarea3: ''
+      reason: '',
+      remarks: '',
+      buildUnit:'',
+      permitGroup:'',
+      itemAttr:'',
+      state:''
+    }
+  },
+  methods: {
+    save() {
+      this.$message({
+        message: '保存消息',
+        type: 'success'
+      });
+    },
+    quit() {
+      this.$confirm('此操作将删除已输入的内容, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$message({
+          type: 'success',
+          message: '取消录入'
+        });
+        this.time = ''
+        this.timebegin = ''
+        this.timeover = ''
+        this.linevalue = ''
+        this.reason = ''
+        this.remarks = ''
+        this.buildUnit = ''
+        this.permitGroup = ''
+        this.itemAttr = ''
+        this.state = ''
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消'
+        });
+      });
     }
   }
 }
@@ -94,8 +169,9 @@ export default{
       align-items center
       margin-bottom 20px
       .demonstration
-        width 80px
+        width 110px
         margin-right 20px
+        text-align right
     .line >>> .el-input
       width 400px
     .line >>> .el-textarea

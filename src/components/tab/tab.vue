@@ -27,12 +27,19 @@
             </template>
             <el-menu-item index="/site">停电单录入</el-menu-item>
           </el-submenu>
-          <el-submenu index="3">
+          <!-- <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-news"></i>
               <span>决策</span>
             </template>
             <el-menu-item index="/policy">决策</el-menu-item>
+          </el-submenu> -->
+          <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-news"></i>
+              <span>统计</span>
+            </template>
+            <el-menu-item index="/statis">统计</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
