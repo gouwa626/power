@@ -6,7 +6,7 @@
           <div class="block">
             <span class="demonstration">起始时间:</span>
             <el-date-picker
-              v-model="time"
+              v-model="timebegin"
               type="date"
               placeholder="选择起始时间">
             </el-date-picker>
@@ -14,7 +14,7 @@
           <div class="block">
             <span class="demonstration">结束时间:</span>
             <el-date-picker
-              v-model="time"
+              v-model="timeover"
               type="date"
               placeholder="选择结束时间">
             </el-date-picker>
@@ -33,11 +33,11 @@
             <span class="demonstration">关键字:</span>
             <el-input
               placeholder="请输入内容"
-              v-model="linevalue"
+              v-model="text"
               clearable>
             </el-input>
           </div>
-          <el-button>查询</el-button>
+          <el-button @click="getData">查询</el-button>
         </div>
       </div>
       <div class="sub">
@@ -91,8 +91,10 @@ export default{
   name: 'ControlContent',
   data () {
     return {
-      time: '',
+      timebegin: '',
+      timeover: '',
       linevalue: '',
+      text: '',
       tableData: [
         {
           id: '01',
@@ -131,6 +133,14 @@ export default{
           other: '自动化改造'
         }
       ]
+    }
+  },
+  methods: {
+    getData() {
+      this.$message({
+        message: '查询成功消息',
+        type: 'success'
+      });
     }
   }
 }

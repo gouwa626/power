@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     submitclick() {
+      this.$router.push('/control')
       console.log(this.signin);
     },
     cancelclick() {
