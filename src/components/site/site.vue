@@ -84,7 +84,7 @@
         </el-input>
       </div>
     </div>
-      
+
     <div class="buttonWrap">
       <div class="btn">
         <el-button round @click="save">保存</el-button>
@@ -106,10 +106,10 @@ export default{
       linevalue: '',
       reason: '',
       remarks: '',
-      buildUnit:'',
-      permitGroup:'',
-      itemAttr:'',
-      state:''
+      buildUnit: '',
+      permitGroup: '',
+      itemAttr: '',
+      state: ''
     }
   },
   methods: {
@@ -152,6 +152,7 @@ export default{
 
 <style scoped lang='stylus'>
 .enterWrap
+  background: #f2f2f2
   .enterHead
     padding 0 20px
     height 34px

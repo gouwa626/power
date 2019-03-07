@@ -14,5 +14,6 @@ export default {
 .header {
   height: 70px;
   color: #fff;
+  background #fff
 }
 </style>

@@ -1,6 +1,9 @@
 <template>
     <section>
-         <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick">
+        <div class="header">
+            统计
+        </div>
+         <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick" class="tab">
             <el-tab-pane label="班组统计" name="first">
                 <groupStatic></groupStatic>
             </el-tab-pane>
@@ -13,19 +16,34 @@
 import groupStatic from './content/groupStatic'
 
 export default {
-    components:{
-        groupStatic
-    },
-    data(){
-        return{
-            activeName:'first'
-        }
+  components: {
+    groupStatic
+  },
+  data() {
+    return {
+      activeName: 'first'
     }
+  },
+  methods: {
+    handleClick() {
+
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-section 
+section
     height 100%
-    padding 30px
+    min-height 800px
+    // padding 30px
+    .header
+        padding 0 20px
+        height 34px
+        border-bottom 1px solid #e2e1e1
+        font-size 20px
+        color #333
+        background-color #fff
+    .tab
+        margin 20px
 </style>

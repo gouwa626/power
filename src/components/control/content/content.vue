@@ -141,7 +141,7 @@
           <el-table-column
             label="操作"
             width="50">
-            <template slot-scope="scope">
+            <template :slot-scope="scope">
               <el-button type="text" @click="handleClick"> 录入 </el-button>
             </template>
           </el-table-column>
@@ -164,6 +164,10 @@ export default{
       timeover: '',
       linevalue: '',
       text: '',
+      buildUnit: '',
+      permitGroup: '',
+      itemAttr: '',
+      state: '',
       tableData: [
         {
           id: '01',
@@ -173,11 +177,11 @@ export default{
           dateover: '11:20',
           reason: '计划停电',
           other: '自动化改造',
-          buildUnit:'',
-          permitGroup:'',
-          itemAttr:'',
-          state:''
-          
+          buildUnit: '',
+          permitGroup: '',
+          itemAttr: '',
+          state: ''
+
         },
         {
           id: '02',
@@ -187,10 +191,10 @@ export default{
           dateover: '11:50',
           reason: '计划停电',
           other: '自动化改造',
-          buildUnit:'',
-          permitGroup:'',
-          itemAttr:'',
-          state:''
+          buildUnit: '',
+          permitGroup: '',
+          itemAttr: '',
+          state: ''
         },
         {
           id: '03',
@@ -200,10 +204,10 @@ export default{
           dateover: '11:50',
           reason: '计划停电',
           other: '自动化改造',
-          buildUnit:'',
-          permitGroup:'',
-          itemAttr:'',
-          state:''
+          buildUnit: '',
+          permitGroup: '',
+          itemAttr: '',
+          state: ''
         },
         {
           id: '04',
@@ -213,10 +217,10 @@ export default{
           dateover: '11:50',
           reason: '计划停电',
           other: '自动化改造',
-          buildUnit:'',
-          permitGroup:'',
-          itemAttr:'',
-          state:''
+          buildUnit: '',
+          permitGroup: '',
+          itemAttr: '',
+          state: ''
         }
       ]
     }
@@ -228,9 +232,9 @@ export default{
         type: 'success'
       });
     },
-    //录入点击
-    handleClick(){
-      this.$router.push({path:'/site'});
+    // 录入点击
+    handleClick() {
+      this.$router.push({path: '/site'});
     }
   }
 }

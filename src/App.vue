@@ -34,17 +34,20 @@ export default {
 <style scoped lang='stylus'>
 #app {
   display: flex;
-  height: 100%;
+  height: auto;
+  min-height: 100%
 
   .tab-wrapper {
     flex: 0 0 200px;
     width: 200px;
-    height: 100%;
-    background-color: #fff
+    height: auto;
+    min-height: 100%
+    background-color:rgb(1,101,105)
   }
 
   .link-wrapper {
     flex: 1;
+    height: auto;
     min-height: 100%;
     background-color: #f2f2f2;
   }
