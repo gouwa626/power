@@ -5,6 +5,7 @@ import Redeem from 'components/redeem/redeem'
 import Site from 'components/site/site'
 import SignIn from 'components/signin/signin'
 import Policy from 'components/policy/policy'
+import Statis from 'components/statis/statis'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/policy',
       name: 'Policy',
       component: Policy
+    },
+    {
+      path: '/statis',
+      name: 'Statis',
+      component: Statis
     }
   ]
 })

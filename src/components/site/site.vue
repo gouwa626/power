@@ -27,10 +27,42 @@
         </el-time-picker>
       </div>
       <div class="block line">
+        <span class="demonstration">项目属性:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="itemAttr"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
+        <span class="demonstration">停电平衡状态:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="state"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
         <span class="demonstration">线路:</span>
         <el-input
           placeholder="请输入内容"
           v-model="linevalue"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
+        <span class="demonstration">施工单位:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="buildUnit"
+          clearable>
+        </el-input>
+      </div>
+      <div class="block line">
+        <span class="demonstration">许可班组:</span>
+        <el-input
+          placeholder="请输入内容"
+          v-model="permitGroup"
           clearable>
         </el-input>
       </div>
@@ -52,6 +84,7 @@
         </el-input>
       </div>
     </div>
+      
     <div class="buttonWrap">
       <div class="btn">
         <el-button round @click="save">保存</el-button>
@@ -72,7 +105,11 @@ export default{
       timeover: '',
       linevalue: '',
       reason: '',
-      remarks: ''
+      remarks: '',
+      buildUnit:'',
+      permitGroup:'',
+      itemAttr:'',
+      state:''
     }
   },
   methods: {
@@ -98,6 +135,10 @@ export default{
         this.linevalue = ''
         this.reason = ''
         this.remarks = ''
+        this.buildUnit = ''
+        this.permitGroup = ''
+        this.itemAttr = ''
+        this.state = ''
       }).catch(() => {
         this.$message({
           type: 'info',
@@ -128,8 +169,9 @@ export default{
       align-items center
       margin-bottom 20px
       .demonstration
-        width 80px
+        width 110px
         margin-right 20px
+        text-align right
     .line >>> .el-input
       width 400px
     .line >>> .el-textarea
